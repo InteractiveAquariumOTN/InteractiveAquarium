@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Tap'n'Track Aquarium</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(function() {
+	$("div").click(function() {
+  	$(this).toggleClass("paused");
+  }
+          )
+  })
+</script>
     <style>
      .pond {
             background: url("aquarium.jpg") no-repeat center center fixed;
@@ -168,6 +176,10 @@
 	/*webkit*/
 	-webkit-animation:swim 150s infinite linear;
 	
+}
+.paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 
@@ -567,7 +579,7 @@ body { overflow: hidden }
  <body>
 
 <div class="pond"></div>
-<div class="fish-salmon"></div>
+<div class="fish-salmon" ></div>
 <div class="fish-eel"></div>
 <div class="fish-oyster"></div>
 <div class="fish-lobster"></div>

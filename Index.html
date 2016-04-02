@@ -8,14 +8,14 @@
 	var data=[];
 	window.onload=function(){
 
-	data= [["octopus","Giant Pacific Octopus","Octopodidae","Enteroctopus","epbJi35lzEs"],
-				["shrimp","Spot Shrimp","Pandalidae","Pandalus","R5Z25nY03Yw"],
-				["salmon","Atlantic Salmon","Salmonidae","Salmo","8x810mszCfU"],
-				["crab","Snow Crab","Oregoniidae","Chionoecetes","0QaAKi0NFkA"],
-				["jellyfish","Jelly fish","Cyaneidae","Aurelia","Pu_ijC8HFRU"],
-			["eel","American eel","Anguillidae","Anguilla","3H1ipbS3q6s"],
-			["lobster","Lobster","Nephropidae","Homarus","I5cF08wEMos"],
-				["whitesturgeon","White Sturgeon","Acipenseridae","Acipenser","z2gPQuq2O-E"]]
+	data= [["octopus","Giant Pacific Octopus","Octopodidae","Enteroctopus","epbJi35lzEs","octopuso"],
+				["shrimp","Spot Shrimp","Pandalidae","Pandalus","R5Z25nY03Yw","shrimpo"],
+				["salmon","Atlantic Salmon","Salmonidae","Salmo","8x810mszCfU","salmono"],
+				["crab","Snow Crab","Oregoniidae","Chionoecetes","0QaAKi0NFkA","crabo"],
+				["jellyfish","Jelly fish","Cyaneidae","Aurelia","Pu_ijC8HFRU","jellyo"],
+			["eel","American eel","Anguillidae","Anguilla","3H1ipbS3q6s","eelo"],
+			["lobster","Lobster","Nephropidae","Homarus","I5cF08wEMos","lobstero"],
+				["whitesturgeon","White Sturgeon","Acipenseridae","Acipenser","z2gPQuq2O-E","sturgeono"]				]
 	}
 </script>
 
@@ -36,15 +36,16 @@ $('#divPop').toggle(false);
 
 				 var ImgName = this.id;
 				 ImgName+=".gif";
-				 $('#fishImg').attr("src", ImgName);
+				 
 			
                  $('#divPop').toggle('slow'); 
 
 				 for ( var i =0;i<data.length; i++){
 					if( this.id==data[i][0] ){
 						$('#td1').html(data[i][1]);
-						$('#td2').html(data[i][2]);
+						$('#td2').html(data[i][4]);
 						$('#td3').html(data[i][3]);
+						$('#fishImg').attr("src",data[i][5]+".gif");
 				document.getElementById('Video').src = "https://www.youtube.com/embed/" + data[i][4]
 	}
                 
@@ -757,7 +758,7 @@ opacity: 0.8;
 		float:left;
 		  z-index: 2500;
 		   vertical-align: text-top;
-		   align-content: left;
+		   align-content: center;
 	}
 
 
@@ -812,7 +813,9 @@ opacity: 0.8;
 		</iframe>
 		</div>
 		<div class="div3">
+		<div align="center">
 		<img id="fishImg" />
+		</div>
 		<table id="subTable">
 	  <tr>
 		<th style="font-size:20px">Fish Name</th>

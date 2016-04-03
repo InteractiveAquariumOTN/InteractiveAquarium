@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html >
   <head>
+
     <meta charset="UTF-8">
     <title>Tap'n'Track Aquarium</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400italic' rel='stylesheet' type='text/css'>
+The CSS
 <script>
 	var data=[];
 	window.onload=function(){
@@ -15,7 +20,11 @@
 				["jellyfish","Jelly fish","Cyaneidae","Aurelia","Pu_ijC8HFRU","jellyo"],
 			["eel","American eel","Anguillidae","Anguilla","3H1ipbS3q6s","eelo"],
 			["lobster","Lobster","Nephropidae","Homarus","I5cF08wEMos","lobstero"],
-				["whitesturgeon","White Sturgeon","Acipenseridae","Acipenser","z2gPQuq2O-E","sturgeono"]]
+				["whitesturgeon","White Sturgeon","Acipenseridae","Acipenser","z2gPQuq2O-E","sturgeono"],
+				["whale","Killer Whale","Delphinidae","Orcinus","rIRZMNOezgI","whaleo"],
+				["shark","Shark","Sphyrnidae","Galeocerdo","usoBP0dhDFk","sharko"]]
+
+
 	}
 </script>
 
@@ -25,7 +34,7 @@
 		$("div").click(function(event) {
                     pondName=$(this).attr('class');
                     pondName2 = $(this).attr('id');
-if (pondName2=="backdrop")
+if ((pondName2=="backdrop")|| (pondName2=="oyster"))
 {
 $('#divPop').toggle(false); 
 document.getElementById('Video'); myPlayer.pauseVideo()
@@ -33,26 +42,30 @@ document.getElementById('Video'); myPlayer.pauseVideo()
 }
 	else
 	{
- var offset = $(event.target).offset(); 
-
-				 var ImgName = this.id;
-				 ImgName+=".gif";
-				 
-			
-                 $('#divPop').toggle('slow'); 
-
-				 for ( var i =0;i<data.length; i++){
+		var isVisible = $( "#divPop" ).is( ":visible" );
+ 		var isHidden = $( "#divPop" ).is( ":hidden" );
+ 		var offset = $(event.target).offset(); 
+		var ImgName = this.id;
+		var checker = false;
+		ImgName+=".gif";
+		//$('#divPop').toggle('slow'); 
+		for ( var i =0;i<data.length; i++){
 					if( this.id==data[i][0] ){
+						checker = true;
 						$('#td1').html(data[i][1]);
+						$('#td11').html(data[i][1]);
 						$('#td2').html(data[i][2]);
 						$('#td3').html(data[i][3]);
 						$('#fishImg').attr("src",data[i][5]+".gif");
-				document.getElementById('Video').src = "https://www.youtube.com/v/" + data[i][4] +"?enablejsapi=1&version=3&playerapiid=ytplayer";
+						document.getElementById('Video').src = "https://www.youtube.com/v/" + data[i][4] +"?enablejsapi=1&version=3&playerapiid=ytplayer";
+													}
+                								}
+	if ( checker==true)
+	{
+		$('#divPop').toggle('slow'); 
+	}
 
 	}
-                
-					}
-				}
                             }
                         
           );
@@ -736,15 +749,15 @@ td, th {
   top: 50%;
   transform: translate(-50%, -50%); /* Yep! */
   width: 48%;
-  height: 59%;
+  height: 40%;
 		margin: 0 auto;
 		background-color:#FFA500 ;
 		border: 1px rgb(89,89,89) solid;
--ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-filter: alpha(opacity=80);
--moz-opacity: 0.8;
--khtml-opacity: 0.8;
-opacity: 0.8;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+filter: alpha(opacity=90);
+-moz-opacity: 0.9;
+-khtml-opacity: 0.9;
+opacity: 0.9;
   display:none; 
   z-index: 150;
 
@@ -767,6 +780,22 @@ opacity: 0.8;
 		   align-content: center;
 	}
 
+
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999; width: 100%;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-cncb{font-family:Georgia, serif !important;;background-color:#ffffff;vertical-align:top}
+.tg .tg-rh1x{font-family:"Trebuchet MS", Helvetica, sans-serif !important;;background-color:#26ade4}
+.tg .tg-es6c{font-family:"Trebuchet MS", Helvetica, sans-serif !important;;background-color:#26ade4;vertical-align:top}
+.tg .tg-k4q0{font-family:Georgia, serif !important;;vertical-align:top}
+
+#header {
+	font-family: 'Lobster', Georgia, Times, serif;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
 
  </style>
 </head>
@@ -816,27 +845,33 @@ opacity: 0.8;
 <div class="centerDiv" id="divPop">
 		<div class="div1">
 	<!--	<embed id="Video" width="100%" height="250px" src="https://www.youtube.com/embed/z2gPQuq2O-E" frameborder="0" /> -->
-	<embed id="Video" width="100%" height="250px" allowscriptaccess="always" quality="high" name="Video" style="" src="http://www.youtube.com/v/z2gPQuq2O-E?enablejsapi=1&version=3&playerapiid=ytplayer" type="application/x-shockwave-flash">
+	<embed id="Video" width="100%" height="390px" allowscriptaccess="always" quality="high" name="Video" style="" src="http://www.youtube.com/v/iFpmuA8awF8?enablejsapi=1&version=3&playerapiid=ytplayer" type="application/x-shockwave-flash">
 		</div>
 		<div class="div3">
+<div id="header">
+<h1 id="td1"></h1>
+</div>
+
+
 		<div align="center">
-		<img id="fishImg" />
+		<img id="fishImg" style="width=100%; height: 80%;" />
 		</div>
-		<table id="subTable">
-	  <tr>
-		<th style="font-size:20px">Fish Name</th>
-		<td id="td1" style="font-size:20px"> </td>
-	  </tr>
-	  <tr>
-		<th style="font-size:20px">Family</th>
-		<td id="td2" style="font-size:20px"> </td>
-	  </tr>
-	  <tr>
-		<th style="font-size:20px">Genus</th>
-		<td id="td3" style="font-size:20px"> </td>
-	  </tr>
-	</table>
-		</div>
+
+<table class="tg">
+  <tr>
+    <td class="tg-es6c">Fish Name</td>
+    <td id="td11" class="tg-k4q0"></td>
+  </tr>
+  <tr>
+    <td class="tg-es6c">Family</td>
+    <td id="td2" class="tg-k4q0"></td>
+  </tr>
+  <tr>
+    <td class="tg-es6c">Genus</td>
+    <td id="td3" class="tg-k4q0"></td>
+  </tr>
+</table>
+
 	</div>
 </div>   
 

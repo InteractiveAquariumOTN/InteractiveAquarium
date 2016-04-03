@@ -15,7 +15,7 @@
 				["jellyfish","Jelly fish","Cyaneidae","Aurelia","Pu_ijC8HFRU","jellyo"],
 			["eel","American eel","Anguillidae","Anguilla","3H1ipbS3q6s","eelo"],
 			["lobster","Lobster","Nephropidae","Homarus","I5cF08wEMos","lobstero"],
-				["whitesturgeon","White Sturgeon","Acipenseridae","Acipenser","z2gPQuq2O-E","sturgeono"]				]
+				["whitesturgeon","White Sturgeon","Acipenseridae","Acipenser","z2gPQuq2O-E","sturgeono"]]
 	}
 </script>
 
@@ -28,6 +28,7 @@
 if (pondName2=="backdrop")
 {
 $('#divPop').toggle(false); 
+document.getElementById('Video'); myPlayer.pauseVideo()
 	
 }
 	else
@@ -46,7 +47,8 @@ $('#divPop').toggle(false);
 						$('#td2').html(data[i][2]);
 						$('#td3').html(data[i][3]);
 						$('#fishImg').attr("src",data[i][5]+".gif");
-				document.getElementById('Video').src = "https://www.youtube.com/embed/" + data[i][4]
+				document.getElementById('Video').src = "https://www.youtube.com/v/" + data[i][4] +"?enablejsapi=1&version=3&playerapiid=ytplayer";
+
 	}
                 
 					}
@@ -813,8 +815,8 @@ opacity: 0.8;
 
 <div class="centerDiv" id="divPop">
 		<div class="div1">
-		<iframe id="Video" width="100%" height="250px" src="https://www.youtube.com/embed/z2gPQuq2O-E" frameborder="0" allowfullscreen>	
-		</iframe>
+	<!--	<embed id="Video" width="100%" height="250px" src="https://www.youtube.com/embed/z2gPQuq2O-E" frameborder="0" /> -->
+	<embed id="Video" width="100%" height="250px" allowscriptaccess="always" quality="high" name="Video" style="" src="http://www.youtube.com/v/z2gPQuq2O-E?enablejsapi=1&version=3&playerapiid=ytplayer" type="application/x-shockwave-flash">
 		</div>
 		<div class="div3">
 		<div align="center">

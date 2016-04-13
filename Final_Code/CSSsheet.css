@@ -1,0 +1,742 @@
+ .pond {
+ 	/* Background Images*/
+     	transform: translateZ(0);
+            background: url("design/Aquarium.jpg") no-repeat center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+}
+
+.fish-salmon{
+	/* Fish Image*/
+	height: 80px;
+	left: 200px;
+        background:url("design/salmon.gif");
+        background-size:contain;
+        background-repeat: no-repeat;
+	position: absolute;
+	top: 75%;
+	width: 180px;
+	z-index: 100;
+	/*firefox*/
+	animation:swim 50s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 50s infinite linear;
+	
+}
+
+.fish-eel{
+		/* Fish Image*/
+	height: 50px;
+	left: 200px;
+        background:url("design/eel.gif");
+        background-size: contain;
+        background-repeat: no-repeat;
+	position: absolute;
+	top: 70%;
+	width: 150px;
+	z-index: 90;
+	/*firefox*/
+	animation:swim 30s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 30s infinite linear;
+	
+}
+
+.fish-octopus{
+	/* Fish Image*/
+	height: 230px;
+	left: 200px;
+        background:url("design/octopus.gif");
+        background-size:contain;
+        background-repeat: no-repeat;
+	position: absolute;
+	top: 60%;
+	width: 200px;
+	z-index: 95;
+	left: 200px;
+	/*firefox*/
+	animation:swim 45s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 45s infinite linear;
+	
+}
+
+.fish-oyster{
+	/* Fish Image*/
+	height: 100px;
+	left: 100px;
+        background:url("design/oyster.gif");
+        background-size:contain;
+        background-repeat: no-repeat;
+	position: absolute;
+	bottom:0;
+	width: 250px;
+	left: 200px;
+	z-index: 100;
+	
+}
+
+.fish-jellyfish{
+	/* Fish Image*/
+	height: 260px;
+	left: 200px;
+        background:url("design/jellyfish.gif");
+        background-size:contain;
+	background-repeat: no-repeat;
+        position: absolute;
+	top: 55%;
+	width: 100px;
+	z-index: 85;
+	left: 200px;
+	/*firefox*/
+	animation:swim 120s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 120s infinite linear;
+	
+}
+
+.fish-shrimp{
+		/* Fish Image*/
+	height: 80px;
+	left: 200px;
+        background:url("design/shrimp.gif");
+        background-size:contain;
+	background-repeat: no-repeat;
+        position: absolute;
+	top: 45%;
+	width: 200px;
+	left: 200px;
+	z-index: 100;
+	/*firefox*/
+	animation:swim 40s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 40s infinite linear;
+	
+}
+
+.fish-whitestr{
+		/* Fish Image*/
+	height: 90px;
+	left: 200px;
+        background:url("design/whitesturgeon.gif");
+        background-size:contain;
+	background-repeat: no-repeat;
+        position: absolute;
+	top: 35%;
+	width: 250px;
+	left: 200px;
+	z-index: 110;
+	/*firefox*/
+	animation:swim 60s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 60s infinite linear;
+	
+}
+
+.fish-whale{
+	/* Fish Image*/
+	height: 500px;
+	left: 200px;
+        background:url("design/whale.gif");
+        background-size:contain;
+        background-repeat: no-repeat;
+        position: absolute;
+	top: 25%;
+	width: 500px;
+	z-index: 120;
+	/*firefox*/
+	animation:swim 100s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 100s infinite linear;
+	
+}
+
+
+.fish-crab{
+	/* Fish Image*/
+	height: 100px;
+	left: 200px;
+        background:url("design/crab.gif");
+        background-repeat: no-repeat;
+        background-size:contain;
+	position: absolute;
+	bottom: 10%;
+	width: 250px;
+	left: 200px;
+	z-index: 130;
+	/*firefox*/
+	animation:swimcl 40s infinite linear;
+	/*webkit*/
+	-webkit-animation:swimcl 40s infinite linear;
+	
+}
+
+.fish-lobster{
+	/* Fish Image*/
+	height: 150px;
+	left: 200px;
+        background:url("design/lobster.gif");
+        background-size:contain;
+	background-repeat: no-repeat;
+        position: absolute;
+	bottom: 15%;
+	width: 290px;
+	left: 200px;
+	z-index: 140;
+	/*firefox*/
+	animation:swimcl 20s infinite linear;
+	/*webkit*/
+	-webkit-animation:swimcl 20s infinite linear;
+	
+}
+
+.fish-shark{
+		/* Fish Image*/
+	height: 300px;
+	left: 200px;
+        background:url("design/shark.gif");
+        background-size:contain;
+        background-repeat: no-repeat;
+        position: absolute;
+	top: 2%;
+	width: 300px;
+	z-index: 150;
+	/*firefox*/
+	animation:swim 50s infinite linear;
+	/*webkit*/
+	-webkit-animation:swim 32s infinite linear;
+	
+}
+
+.plankton{
+		/* Fish Image*/
+	height: 500px;
+	left: 100px;
+        background:url("design/blueplant.gif");
+        background-size:contain;
+        background-repeat: no-repeat;
+	position: absolute;
+	bottom:0;
+	width: 600px;
+	left: 70%;
+	z-index: 100;
+	
+}
+
+	/* Key Frames for fishes animation*/
+@keyframes swimcl{
+	from{
+               
+		left:105%;
+                overflow: hidden;
+                
+	}
+        to{ left:-5%;
+            overflow:hidden;
+                
+                }
+}
+
+
+@-webkit-keyframes swimcl{
+	from{
+               
+		left:105%;
+                overflow: hidden;
+                
+                
+	}
+	
+        to{right :105%;
+            overflow:hidden;
+                
+                }
+}
+
+@keyframes swim{
+	from{
+		left:75%;
+	}
+	20%{
+		left:0;
+		transform:scaleX(1);
+		z-index:90;
+	}
+	20.5%{
+		transform:scaleX(-1);
+		z-index:90;
+		left:-30px;
+	}
+	21%{
+		left:40px;
+	}
+	42%{
+		left:60%;
+	}
+	50%{
+		z-index:28;
+		top:30%;
+		left:70%;
+		transform:scaleX(-1);
+	}
+	50.5%{
+		transform:scaleX(1);
+		z-index:100;
+		left:70%;
+		top:40%;
+	}
+	51%{
+		left:50%px;
+		z-index:150;
+	}
+	60%{
+		left:30%;
+		z-index:150;
+	}
+	64%{
+		left:20%;
+		z-index:150;
+	}
+	
+	69%{
+		left:-30px;
+		z-index:150;
+	}
+	70%{
+		top:15%;
+		left:-30px;
+		transform:scaleX(1);
+		z-index:90;
+	}
+	70.5%{
+		transform:scaleX(-1);
+		z-index:10;
+		left:-20px;
+	}
+	71%{
+		left:40px;
+	}
+	80%{
+		left:60%;
+	}
+	81%{
+		left:65%;
+		top:45%;
+	}
+	82%{
+		left:68%;
+		transform:scaleX(-1);
+	}
+	82.5%{
+		transform:scaleX(1);
+		top:45%;
+		left:69%;
+	}
+	84%{
+		top:50%;
+		left:70%;
+		z-index:28;
+	}
+	88%{
+		top:55%;
+		left:70%;
+		z-index:28;
+	}
+	to{
+		left:75%;
+	}
+}
+
+@-webkit-keyframes swim{
+	from{
+		left:75%;
+	}
+	20%{
+		left:0;
+		transform:scaleX(1);
+		z-index:90;
+	}
+	20.5%{
+		transform:scaleX(-1);
+		z-index:10;
+		left:-30px;
+	}
+	21%{
+		left:40px;
+	}
+	42%{
+		left:60%;
+	}
+	50%{
+		z-index:28;
+		top:30%;
+		left:70%;
+		transform:scaleX(-1);
+	}
+	50.5%{
+		transform:scaleX(1);
+		z-index:100;
+		left:70%;
+		top:40%;
+	}
+	51%{
+		left:50%px;
+		z-index:150;
+	}
+	60%{
+		left:30%;
+		z-index:150;
+	}
+	64%{
+		left:20%;
+		z-index:150;
+	}
+
+	69%{
+		left:-30px;
+		z-index:150;
+	}
+	70%{
+		top:15%;
+		left:-30px;
+		transform:scaleX(1);
+		z-index:90;
+	}
+	70.5%{
+		transform:scaleX(-1);
+		z-index:10;
+		left:-20px;
+	}
+	71%{
+		left:40px;
+	}
+	80%{
+		left:60%;
+	}
+	81%{
+		left:65%;
+		top:45%;
+	}
+	82%{
+		left:68%;
+		transform:scaleX(-1);
+	}
+	82.5%{
+		transform:scaleX(1);
+		top:45%;
+		left:69%;
+	}
+	84%{
+		top:50%;
+		left:70%;
+		z-index:28;
+	}
+	88%{
+		top:55%;
+		left:70%;
+		z-index:28;
+	}
+	to{
+		left:75%;
+	}
+}
+
+	/* Bubbles Css*/
+#bubbles { height: 100% }
+body { overflow: hidden }
+#bubbles { padding: 100px 0 }
+.bubble {
+    width: 30px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 500px;
+    -moz-border-radius: 500px;
+    -webkit-border-radius: 500px;
+    position: relative;
+}
+	/* Indivisual Bubble CSS*/
+.x1 {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.2;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+	/* Indivisual Bubble CSS*/
+    left: 10%;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x3 {
+	/* Indivisual Bubble CSS*/
+    left: 17%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x4 {
+	/* Indivisual Bubble CSS*/
+    left: 23%;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.35;
+    -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+.x5 {
+	/* Indivisual Bubble CSS*/
+    left: 29%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+.x5 {
+	/* Indivisual Bubble CSS*/
+    left: 37%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+
+.x6 {
+	/* Indivisual Bubble CSS*/
+    left: 50%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    opacity: 0.2;
+    -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x7 {
+	/* Indivisual Bubble CSS*/
+    left: 58%;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    -o-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+.x8 {
+	/* Indivisual Bubble CSS*/
+    left: 65%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3;
+    -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    -o-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+.x9 {
+	/* Indivisual Bubble CSS*/
+    left: 85%;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.35;
+    -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -o-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+}
+.x10 {
+	/* Indivisual Bubble CSS*/
+    left: 90%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+.x11 {
+	/* Indivisual Bubble CSS*/
+    left: 97%;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.3; 
+    -webkit-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -moz-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+    -o-animation: moveclouds 7s linear infinite, sideWays 1s ease-in-out infinite alternate;
+}
+
+/* Bubbles CSS*/
+@-webkit-keyframes moveclouds { 
+    0% { 
+        top: 500px;
+    }
+    100% { 
+        top: -500px;
+    }
+}
+
+@-webkit-keyframes sideWays { 
+    0% { 
+        margin-left:0px;
+    }
+    100% { 
+        margin-left:50px;
+    }
+}
+
+@-moz-keyframes moveclouds {     
+    0% { 
+        top: 500px;
+    }
+
+    100% { 
+        top: -500px;
+    }
+}
+
+@-moz-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+@-o-keyframes moveclouds {
+    0% { 
+        top: 500px;
+    }
+    100% { 
+        top: -500px;
+    }
+}
+
+@-o-keyframes sideWays {
+    0% {
+        margin-left:0px;
+    }
+    100% {
+        margin-left:50px;
+    }
+}
+.paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+
+/* Inner Fish Image*/
+#fishImg{
+	width:70% ; 
+	height:40%;
+}
+/* Table Div CSS*/
+#subTable{
+	border: 1px solid black;
+	height: 0%;
+	font-size:30px;
+}
+td, th {
+    border: 1px solid black;
+}
+.topdiv{
+	background-color: rgba(38, 12, 12, 0.1);
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	
+}
+.belowdiv{
+	background-color: rgba(38, 12, 12, 0.1);
+	position: fixed;
+    bottom: 0;
+	width: 100%;
+	text-align: right;
+	align-items: right;
+	
+}
+.centerDiv
+	{
+		  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Yo ho!!!!!  Eventually works ...*/
+  width: 48%;
+  height: 40%;
+		margin: 0 auto;
+		/*background-color:#FFA500; */
+		border: 1px rgb(89,89,89) solid;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+filter: alpha(opacity=90);
+-moz-opacity: 0.9;
+-khtml-opacity: 0.9;
+opacity: 0.9;
+  display:none; 
+  z-index: 150;
+
+	}
+	.div1
+	{
+		width: 60%;
+		height:200px;
+		float:left;
+		  z-index: 2500;
+		   vertical-align: text-top;
+	}
+	.div3
+	{
+		width: 40%;
+		height:200px;
+		float:left;
+		  z-index: 2500;
+		   vertical-align: text-top;
+		   align-content: center;
+	}
+
+
+/* INNER Div contents CSS*/
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999; width: 100%;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#F7FDFA;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#26ADE4;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-cncb{font-family:Georgia, serif !important;;background-color:#ffffff;vertical-align:top}
+.tg .tg-rh1x{font-family:"Trebuchet MS", Helvetica, sans-serif !important;;background-color:#26ade4}
+.tg .tg-es6c{font-family:"Trebuchet MS", Helvetica, sans-serif !important;;background-color:#26ade4;vertical-align:top}
+.tg .tg-k4q0{font-family:Georgia, serif !important;;vertical-align:top}
+/* CSS for font on DIV */
+#header {
+	font-family: 'Lobster', Georgia, Times, serif;
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
